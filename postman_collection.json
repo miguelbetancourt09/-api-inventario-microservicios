@@ -1,0 +1,174 @@
+{
+  "info": {
+    "name": "01_api_inventario",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "productos-service: GET /",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8081/api/productos"
+      }
+    },
+    {
+      "name": "productos-service: GET /1",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8081/api/productos/1"
+      }
+    },
+    {
+      "name": "productos-service: POST /",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8081/api/productos",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Teclado\",\n  \"descripcion\": \"Mecanico\",\n  \"precio\": 75000\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "productos-service: PUT /1",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8081/api/productos/1",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Teclado\",\n  \"descripcion\": \"Mecanico\",\n  \"precio\": 75000\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "productos-service: DELETE /1",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8081/api/productos/1"
+      }
+    },
+    {
+      "name": "existencias-service: GET /",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8082/api/existencias"
+      }
+    },
+    {
+      "name": "existencias-service: GET /1",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8082/api/existencias/1"
+      }
+    },
+    {
+      "name": "existencias-service: POST /",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8082/api/existencias",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productoId\": 1,\n  \"cantidad\": 20,\n  \"ubicacion\": \"Bodega A\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "existencias-service: PUT /1",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8082/api/existencias/1",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"productoId\": 1,\n  \"cantidad\": 20,\n  \"ubicacion\": \"Bodega A\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "existencias-service: DELETE /1",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8082/api/existencias/1"
+      }
+    }
+  ]
+}
